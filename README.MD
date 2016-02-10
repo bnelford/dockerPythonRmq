@@ -1,5 +1,9 @@
 This is a project that allows the scale testing of a local rabbitMQ docker instance with publishers.
 
+Requirements:
+Docker engine 1.8+ (because of the python containers)
+Docker-compose binary 1.5.2+
+
 How to use:
 
 Set your local IP address in the basic reader and basic writer files.
@@ -20,6 +24,3 @@ docker-compose scale publisher=10
 A few notes:
 The reader's prefetch is set to 0 - I did this so that no messages would be lost upon reader exit.
 The python is a but sloppy, but should be fine.
-
-Requirements:
-Docker engine 1.8 or greater (because of the python containers)
